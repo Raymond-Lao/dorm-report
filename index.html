@@ -127,26 +127,6 @@
         </div>
         
         <div class="main-content">
-            <div class="community-card" data-community="4">
-                <div class="community-header"><div class="community-icon community-4">4</div><div class="community-title"><h2>第4社区</h2><p>社区长提交入口</p></div></div>
-                <div class="form-group"><label>总人数</label><input type="number" class="total" placeholder="请输入总人数"></div>
-                <div class="form-group"><label>未在校人数</label><input type="number" class="absent" placeholder="请输入未在校人数"></div>
-                <div class="form-group"><label>走读人员</label><textarea class="commuter" placeholder="走读人员姓名，用换行分隔"></textarea></div>
-                <div class="form-group"><label>请假人员</label><textarea class="leave" placeholder="请假人员姓名，用换行分隔"></textarea></div>
-                <div class="night-return-section">
-                    <h4>🌙 晚归人员</h4>
-                    <div class="night-return-container" data-community="4">
-                        <div class="night-return-item">
-                            <input type="text" class="name-input" placeholder="姓名">
-                            <input type="text" class="id-input" placeholder="学号">
-                            <input type="text" class="reason-input" placeholder="晚归原因">
-                            <button class="remove-night-btn" style="display: none;">删除</button>
-                        </div>
-                    </div>
-                    <button class="add-night-btn" data-community="4">+ 添加晚归人员</button>
-                </div>
-                <button class="submit-btn" data-community="4">提交汇报</button>
-            </div>
             <div class="community-card" data-community="14">
                 <div class="community-header"><div class="community-icon community-14">14</div><div class="community-title"><h2>第14社区</h2><p>社区长提交入口</p></div></div>
                 <div class="form-group"><label>总人数</label><input type="number" class="total" placeholder="请输入总人数"></div>
@@ -264,12 +244,6 @@
             <div class="community-list" id="communityList">
                 <div class="community-item">
                     <div class="community-item-header">
-                        <span class="name">第4社区</span>
-                        <span class="basic-info">未提交</span>
-                    </div>
-                </div>
-                <div class="community-item">
-                    <div class="community-item-header">
                         <span class="name">第14社区</span>
                         <span class="basic-info">未提交</span>
                     </div>
@@ -321,8 +295,8 @@
         var socket = null;
         var isConnected = false;
         var SERVER_URL = 'https://dorm-report-production.up.railway.app';
-        var COMMUNITY_IDS = [4, 14, 15, 16, 17, 18];
-        var COMMUNITY_NAMES = ['第4社区', '第14社区', '第15社区', '第16社区', '第17社区', '第18社区'];
+        var COMMUNITY_IDS = [14, 15, 16, 17, 18];
+        var COMMUNITY_NAMES = ['第14社区', '第15社区', '第16社区', '第17社区', '第18社区'];
         
         function countNames(names) {
             if (!names || names.trim() === '') return 0;
